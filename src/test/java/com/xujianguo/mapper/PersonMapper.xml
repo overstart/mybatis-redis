@@ -8,7 +8,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<resultMap type="com.xujianguo.model.Person" id="PersonMap">
 		<id property="id" column="id"/>
 		<result property="name" column="name"/>
-		<association property="address" column="address" select="com.xujianguo.dao.AddressDao.findById"/>
+		<association property="address" column="id" select="com.xujianguo.dao.AddressDao.findById"/>
 		<collection property="cars" column="id" select="com.xujianguo.dao.CarDao.findByOwner"/>
 	</resultMap>
 	
